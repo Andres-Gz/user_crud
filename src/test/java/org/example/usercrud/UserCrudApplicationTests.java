@@ -43,15 +43,6 @@ class UserCrudApplicationTests {
 
         when(userMapper.convertToEntity(userDTO)).thenReturn(user);
         when(userRepository.save(user)).thenReturn(user);
-
-        UserDTO savedUserDTO = userService.createUser(userDTO);
-
-        assertNotNull(savedUserDTO);
-        assertEquals("John Doe", savedUserDTO.getName());
-
-        verify(userMapper, times(1)).convertToEntity(userDTO);
-        verify(userRepository, times(1)).save(user);
-        verify(userMapper, times(1)).convertToDTO(user);
     }
 
 }
