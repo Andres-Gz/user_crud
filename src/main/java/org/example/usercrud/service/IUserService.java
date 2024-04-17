@@ -1,15 +1,19 @@
 package org.example.usercrud.service;
 
-import org.example.usercrud.model.User;
+import org.example.usercrud.commons.dto.UserDTO;
 
 import java.util.List;
 
 public interface IUserService {
 
-    User createUser(User user);
-    User updateUser(User user);
-    User getUserById(Long id);
-    List<User> getAllUsers();
+    UserDTO createUser(UserDTO userDTO);
+
+    UserDTO updateUser(UserDTO userDTO);
+
+    UserDTO getUserById(Long id);
+
+    List<UserDTO> getAllUsers();
+
     void deleteUser(Long id);
 
 }

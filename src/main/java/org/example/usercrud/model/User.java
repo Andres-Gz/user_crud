@@ -13,17 +13,11 @@ public class User {
 
     private String lastname;
 
-    private String age;
-
-    public User(String name, String lastname, String age) {
-        this.name = name;
-        this.lastname = lastname;
-        this.age = age;
-    }
+    private int age;
 
     public User() {
+        // Constructor del user
     }
-
 
     public Long getId() {
         return id;
@@ -49,11 +43,11 @@ public class User {
         this.lastname = lastname;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
